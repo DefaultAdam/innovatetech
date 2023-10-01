@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--https://youtu.be/FazgJVnrVuI -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Techsite" content="width=device-width, initial-scale=1.0" /> 
+    <title>Techsite</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body id="set-height">
+    <section class="section1">
+            <nav class="navbar">
+                <div class="navbar_container">
+                    <a href="/" id="navbar_logo"> InnovateTech </a>
+                    <div class="navbar_toggle" id="mobile-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul class="navbar_menu">
+                        <li class="navbar_item">
+                            <a href="/index.html" class="navbar_links"> HOME </a>
+                        </li>
+                        <li class="navbar_item">
+                            <a href="/explore.html" class="navbar_links"> EXPLORE </a>
+                        </li>
+                        <li class="navbar_item">
+                            <a href="/contact.html" class="navbar_links"> CONTACT </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    
+    <!-- https://youtu.be/2ak37WrbSDg -->
+    <section class="introduction">
+        <h1 class="logo-header">
+            <span class="logo"> Innovate </span><span class="logo"> Tech </span>
+        </h1> 
+
+        <header>
+            <h4> LOGO </h4>
+        </header>
+
+        <script>
+            let introduction = document.querySelector('.introduction');
+            let logo = document.querySelector('.logo-header');
+            let logoSpan = document.querySelectorAll('.logo');
+          
+            window.addEventListener('DOMContentLoaded', () => {
+              setTimeout(() => {
+                logoSpan.forEach((span, idx) => {
+                  setTimeout(() => {
+                    span.classList.add('active');
+                  }, (idx + 1) * 400);
+                });
+          
+                setTimeout(() => {
+                  logoSpan.forEach((span, idx) => {
+                    setTimeout(() => {
+                      span.classList.remove('active');
+                      span.classList.add('fade');
+                    }, (idx + 1) * 50);
+                  });
+                }, 2000);
+          
+                setTimeout(() => {
+                  introduction.style.top = '-100vh';
+                }, 2500); // Adjusted the timing to 2500 milliseconds
+              });
+            });
+          </script>
+    </section>
+            
+
+    <section class="contact">
+      <h1 class="contact-us"> Please share any articles you would want to see </h1>
+      <div class="form-container">
+        <form class="form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required="">
+          </div>
+          <div class="form-group">
+            <label for="textarea">Message</label>
+            <textarea name="textarea" id="textarea" rows="10" cols="50" required="">          </textarea>
+          </div>
+          <button class="form-submit-btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <script src="app.js"> </script>
+</body>
+</html>

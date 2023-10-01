@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!--https://youtu.be/FazgJVnrVuI -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Techsite" content="width=device-width, initial-scale=1.0" /> 
+    <title>Techsite</title>
+    <link rel="stylesheet" href="explore.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body id="set-height">
+    <section class="section1">
+            <nav class="navbar">
+                <div class="navbar_container">
+                    <a href="/" id="navbar_logo"> InnovateTech </a>
+                    <div class="navbar_toggle" id="mobile-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul class="navbar_menu">
+                        <li class="navbar_item">
+                            <a href="/" class="navbar_links"> HOME </a>
+                        </li>
+                        <li class="navbar_item">
+                            <a href="/explore.html" class="navbar_links"> EXPLORE </a>
+                        </li>
+                        <li class="navbar_item">
+                            <a href="/contact.html" class="navbar_links"> CONTACT </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+    
+    <!-- https://youtu.be/2ak37WrbSDg -->
+    <section class="introduction">
+        <h1 class="logo-header">
+            <span class="logo"> Innovate </span><span class="logo"> Tech </span>
+        </h1> 
+
+        <header>
+            <h4> LOGO </h4>
+        </header>
+
+        <script>
+            let introduction = document.querySelector('.introduction');
+            let logo = document.querySelector('.logo-header');
+            let logoSpan = document.querySelectorAll('.logo');
+          
+            window.addEventListener('DOMContentLoaded', () => {
+              setTimeout(() => {
+                logoSpan.forEach((span, idx) => {
+                  setTimeout(() => {
+                    span.classList.add('active');
+                  }, (idx + 1) * 400);
+                });
+          
+                setTimeout(() => {
+                  logoSpan.forEach((span, idx) => {
+                    setTimeout(() => {
+                      span.classList.remove('active');
+                      span.classList.add('fade');
+                    }, (idx + 1) * 50);
+                  });
+                }, 2000);
+          
+                setTimeout(() => {
+                  introduction.style.top = '-100vh';
+                }, 2500); // Adjusted the timing to 2500 milliseconds
+              });
+            });
+          </script>
+    </section>
+
+
+    <section class = "news">
+      <img class="background"/>
+      <div class = "news-container">
+        <div class = "news-head">
+          <h2>Explore the latest tech news here!</h2>
+          <p></p>
+        </div>
+
+        <div class = "news-btns">
+          <button type = "button" class = "news-btn active-btn" id = "trending">Trending</button>
+          <button type = "button" class = "news-btn" id = "hardware">Hardware</button>
+          <button type = "button" class = "news-btn" id = "software">Software</button>
+        </div>
+
+        <div class = "food-items">
+          <!-- item -->
+          <div class = "food-item trending">
+            <div class = "article-img">
+              <img src = "images/vision-pro.png" alt = "">
+            </div>
+            <div class = "article-content">
+              <h2 class = "food-name">Apple Vision Pro</h2>
+              <div class = "line"></div>
+              <button class = "food-price" href="">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item trending">
+            <div class = "food-img">
+              <img src = "images/twitter.png" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> Twitter's rebranding to X </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item trending">
+            <div class = "food-img">
+              <img src = "images/disney+.png" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> Disney+ Account Sharing </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item trending">
+            <div class = "food-img">
+              <img src = "images/gpt5.png" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> OpenAI GPT-5 </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item trending">
+            <div class = "food-img">
+              <img src = "" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> ARTICLE </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item trending">
+            <div class = "food-img">
+              <img src = "" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> ARTICLE </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item hardware">
+            <div class = "food-img">
+              <img src = "" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> ARTICLE </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item hardware">
+            <div class = "food-img">
+              <img src = "" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> ARTICLE </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item hardware">
+            <div class = "food-img">
+              <img src = "" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> ARTICLE </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item hardware">
+            <div class = "food-img">
+              <img src = "" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> ARTICLE </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item hardware">
+            <div class = "food-img">
+              <img src = "" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> ARTICLE </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item hardware">
+            <div class = "food-img">
+              <img src = "" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> ARTICLE </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item software">
+            <div class = "food-img">
+              <img src = "" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> ARTICLE </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item software">
+            <div class = "food-img">
+              <img src = "" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> ARTICLE </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item software">
+            <div class = "food-img">
+              <img src = "" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> ARTICLE </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item software">
+            <div class = "food-img">
+              <img src = "" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> ARTICLE </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item software">
+            <div class = "food-img">
+              <img src = "" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> ARTICLE </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <!-- item -->
+          <div class = "food-item software">
+            <div class = "food-img">
+              <img src = "" alt = "">
+            </div>
+            <div class = "food-content">
+              <h2 class = "food-name"> ARTICLE </h2>
+              <div class = "line"></div>
+              <button class = "food-price">Read more</button>
+              <p class = "category">Tags: <span>Trending/Hardware</span></p>
+            </div>
+          </div>
+          <!-- end of item -->
+        </div>
+      </div>
+
+      <script> 
+        
+
+        const menuBtns = document.querySelectorAll('.news-btn');
+        const foodItems = document.querySelectorAll('.food-item');
+
+        let activeBtn = "trending";
+
+        showFoodMenu(activeBtn);
+
+        menuBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                resetActiveBtn();
+                showFoodMenu(btn.id);
+                btn.classList.add('active-btn');
+            });
+        });
+
+        function resetActiveBtn(){
+            menuBtns.forEach((btn) => {
+                btn.classList.remove('active-btn');
+            });
+        }
+
+        function showFoodMenu(newMenuBtn){
+            activeBtn = newMenuBtn;
+            foodItems.forEach((item) => {
+                if(item.classList.contains(activeBtn)){
+                    item.style.display = "grid";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+      </script>
+    </section>
+    <script src="app.js"> </script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<!--https://youtu.be/FazgJVnrVuI -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Techsite" content="width=device-width, initial-scale=1.0" /> 
+    <title>Techsite</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a6e5c56994.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.7/dist/js/splide.min.js">
+
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.css'>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body id="set-height">
+    <section class="section1">
+            <nav class="navbar">
+                <div class="navbar_container">
+                    <a href="/" id="navbar_logo"> InnovateTech </a>
+                    <div class="navbar_toggle" id="mobile-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul class="navbar_menu">
+                        <li class="navbar_item">
+                            <a href="/index.html" class="navbar_links"> HOME </a>
+                        </li>
+                        <li class="navbar_item">
+                            <a href="/explore.html" class="navbar_links"> EXPLORE </a>
+                        </li>
+                        <li class="navbar_item">
+                            <a href="/contact.html" class="navbar_links"> CONTACT </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+
+
+    <section class="startpopup">
+      <div class="popup">
+          <button id="close">&times;</button>
+          <h2>Welcome to InnovateTech!</h2>
+          <img src="images/disney+.png" />
+          <p>
+              InnovateTech was created for the purpose to introduce interest users the new and updated world of tech! We provide the latest and greatest news and condence it for your reading benefit.
+          </p>
+      </div>
+      <script>
+        window.addEventListener("load", function(){
+            setTimeout(
+                function open(event){
+                    document.querySelector(".popup").style.display = "block";
+                },
+                1000
+            )
+        });
+
+
+        document.querySelector("#close").addEventListener("click", function(){
+            document.querySelector(".popup").style.display = "none";
+        });        
+      </script>
+    </section>
+    
+    <!-- https://youtu.be/2ak37WrbSDg -->
+    <section class="introduction">
+        <h1 class="logo-header">
+            <span class="logo"> Innovate </span><span class="logo"> Tech </span>
+        </h1> 
+
+        <header>
+            <h4> LOGO </h4>
+        </header>
+
+        <script>
+            let introduction = document.querySelector('.introduction');
+            let logo = document.querySelector('.logo-header');
+            let logoSpan = document.querySelectorAll('.logo');
+          
+            window.addEventListener('DOMContentLoaded', () => {
+              setTimeout(() => {
+                logoSpan.forEach((span, idx) => {
+                  setTimeout(() => {
+                    span.classList.add('active');
+                  }, (idx + 1) * 400);
+                });
+          
+                setTimeout(() => {
+                  logoSpan.forEach((span, idx) => {
+                    setTimeout(() => {
+                      span.classList.remove('active');
+                      span.classList.add('fade');
+                    }, (idx + 1) * 50);
+                  });
+                }, 2000);
+          
+                setTimeout(() => {
+                  introduction.style.top = '-100vh';
+                }, 2500); // Adjusted the timing to 2500 milliseconds
+              });
+            });
+          </script>
+    </section>
+            
+        <!--https://www.videvo.net/video/hologram-planet/4743/-->
+    <section class="section2">
+      <h1 class="welcome_content"> Welcome, </h1>
+      <div class="welcome_text">
+          <span class="text welcome_one"> explore </span>
+          <span class="text welcome_two"> technology. </span>
+      </div>
+
+      <script>
+          const text = document.querySelector('.welcome_two');
+        
+          const textLoad = () => {
+            text.textContent = ' technology.'; // Show "technology"
+            setTimeout(() => {
+              text.textContent = ' the future.'; // Show "the future"
+              setTimeout(() => {
+                textLoad(); // Call textLoad again after showing "the future"
+              }, 3500); // Show "the future" for 3500 milliseconds
+            }, 3500); // Show "technology" for 3500 milliseconds and then show "the future"
+          };
+        
+          textLoad(); // Initial call to start the loop
+        </script>
+    </section>
+    
+    <section class="swiper mySwiper">
+      <h2 class="explore"> Explore the latest </h1>
+      <div class="swiper-wrapper">
+
+        <div class="card swiper-slide">
+          <div class="card_image">
+            <img src="images/vision-pro.png" alt=" ">
+          </div>
+          <div class="card_content">
+            <span class="card_title"> Apple Vision Pro </span>
+            <span class="card_name">  </span>
+            <p class="card_text"> Read more about the Apple Vision Pro. </p>
+            <button class="card_btn"> Read More </button>
+          </div>
+        </div>
+
+        <div class="card swiper-slide">
+          <div class="card_image">
+            <img src="images/disney+.png" alt=" ">
+          </div>
+          <div class="card_content"> 
+            <span class="card_title"> Disney + </span>
+            <span class="card_name">  </span>
+            <p class="card_text"> Read more about the Disney + cracking down on password sharing. </p>
+            <button class="card_btn"> Read More </button>
+          </div>
+        </div>
+
+        <div class="card swiper-slide">
+          <div class="card_image">
+            <img src="images/gpt5.png" alt=" ">
+          </div>
+          <div class="card_content"> 
+            <span class="card_title"> OpenAI GPT-5 </span>
+            <span class="card_name">  </span>
+            <p class="card_text"> Read more about the OpenAI's GPT-5 </p>
+            <button class="card_btn"> Read More </button>
+          </div>
+        </div>
+
+        <div class="card swiper-slide">
+          <div class="card_image">
+            <img src="images/twitter.png" alt=" ">
+          </div>
+          <div class="card_content"> 
+            <span class="card_title"> Twitter </span>
+            <span class="card_name">  </span>
+            <p class="card_text"> Read more about the Twitter rebranding to X. </p>
+            <button class="card_btn"> Read More </button>
+          </div>
+        </div>
+
+        <div class="card swiper-slide">
+          <div class="card_image">
+            <img src="images/.png" alt=" ">
+          </div>
+          <div class="card_content"> 
+            <span class="card_title">  </span>
+            <span class="card_name"> ARTICLE </span>
+            <p class="card_text"> Read more about ... </p>
+            <button class="card_btn"> Read More </button>
+          </div>
+        </div>
+
+        <div class="card swiper-slide">
+          <div class="card_image">
+            <img src="images/.png" alt=" ">
+          </div>
+          <div class="card_content"> 
+            <span class="card_title"> </span>
+            <span class="card_name"> ARTICLE </span>
+            <p class="card_text"> Read more about ... </p>
+            <button class="card_btn"> Read More </button>
+          </div>
+        </div>
+
+        <div class="card swiper-slide">
+          <div class="card_image">
+            <img src="images/.png" alt=" ">
+          </div>
+          <div class="card_content"> 
+            <span class="card_title"> </span>
+            <span class="card_name"> ARTICLE </span>
+            <p class="card_text"> Read more about ... </p>
+            <button class="card_btn"> Read More </button>
+          </div>
+        </div>
+
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 10000, 
+          autoplayHoverPause: true,
+
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 300,
+            modifier: 1,
+            slideShadows: true,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+      </script>
+    </section>
+
+
+
+
+    <section class="hi">
+      <div class="img-slider"></div>
+        <div>
+    </section>
+
+
+    <script src="app.js"> </script>
+</body>
+</html>

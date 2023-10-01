@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    outline: solid 1px transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+#set-height {
+    display: block;
+    height: 3000px;
+    
+    }
+
+body {
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#07070d 1200px, #f8f4f4 1200px, #f8f4f4 2200px, #07070d 2000px, #07070d 3000px);
+}
+
+.navbar {
+    background-color: #07070d;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+    left: -100px;
+}
+
+#navbar_logo {
+    color: #ff8177;
+    background-image: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 32px;
+}
+
+.fa-gem {
+    margin-right: 8px;
+}
+
+.navbar_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    left: 1000px;
+}
+
+.navbar_item {
+    height: 80px;
+    width: 250px;
+}
+
+.navbar_toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.navbar_links {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar_container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+    }
+
+    .navbar_menu {
+        display: grid;
+        grid-template-columns: auto;
+        margin: 0;
+        width: 100%;
+        height: 50vh;
+        position: absolute;
+        top: -1000px;
+        opacity: 0;
+        transition: all 0.5s ease;
+        z-index: -1;
+    }
+
+    .navbar_menu.active {
+        background: #242222;
+        top: 100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 99;
+        height: 50vh;
+        font-size: 24px;
+    }
+
+    #navbar_logo {
+        padding-left: 25px;
+    }
+
+    .navbar_toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;   
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar_item {
+        width: 100%;
+    }
+
+    .navbar_links {
+        text-align: center;
+        padding: 32px;
+        width: 100%;
+        display: table;
+    }
+
+    #mobile_menu {
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform: translate(-5%, 20%);
+    }
+
+    .navbar_toggle .bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+header h4 {
+    position: absolute;
+    left: auto;
+    bottom: 16px;
+    font-size: 1.6rem;
+}
+
+.introduction {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    transition: 1s;
+}
+
+.logo-header {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+
+.logo.active {
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.logo.fade {
+    bottom: 1000px;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+
+.welcome_content {
+    position: absolute;
+    color: #fff;
+    top: 12%;
+    left: 20%;
+    grid: 0%;
+    z-index: 2;
+    font-size: 80px;
+    display: flex;
+    animation-name: animate__backInDown;
+    animation-duration: 6.2s;
+}
+.welcome_text {
+    position: absolute;
+    top: 12.5%;
+    left: 41%;
+    z-index: 2;
+    font-size: 60px;
+    animation-name: animate__backInDown;
+    animation-duration: 6.2s;
+}
+
+
+@keyframes animate__backInDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.welcome_text .text {
+    position: relative;
+    left: 20px;
+    color: #0101e4; 
+    font-size: 75px;
+    font-weight: 400px;
+}
+
+.welcome_text .text.welcome_one {
+    color: #fff;
+}
+
+.welcome_text .text.welcome_two:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-color: #07070d;
+    border-left: 2px solid #fff;
+    animation: animate 3.5s steps(11) infinite;
+}
+
+@keyframes animate {
+    40%, 60% {
+        left: 100%
+    }
+    100% {
+        left: 0;
+    }
+}
+
+.explore {
+    position: absolute;
+    top: -8%;
+    left: 20%;
+    color: #fff;
+}
+
+.swiper {
+    position: relative;
+    top: 10%;
+    left: 0%;
+}
+
+.swiper-wrapper {
+    width: 1000%;
+    height: 1000%;
+    display: flex;
+    align-items: center;
+}
+
+.card {
+    width: 500px;
+    height: 90%;
+    background-color: #fff;
+    border-radius: 2em;
+    padding: 2em 1em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 2em;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+    filter: blur(1px);
+    filter: grayscale(1);
+    opacity: 0.5;
+}
+
+.card_image img {
+    width: 100%;
+}
+
+.card_image:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+
+.card_content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_title {
+    font-size: 1.5em;
+    font-weight: 500;
+    position: relative;
+    top: .2em
+}
+
+.card_name {
+    color: #917be2;
+}
+
+.card_text {
+    text-align: center;
+    margin: 1em 0;
+    font-size: 1.2em;
+}
+
+/* https://uiverse.io/SteveBloX/short-fish-35 */
+.card_btn {
+    width: 150px;
+    height: 60px;
+    border: 3px solid #3081ED;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+    font-size: 1.1em;
+    font-weight: 550;
+}
+
+.card_btn:hover {
+background: #315cfd;
+color: white;
+font-size: 1em;
+transition: all 0.3s;
+}
+
+.popup{
+    background-color: #fff;
+    width: 1100px;
+    height: 800px;
+    padding: 30px 40px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none;
+    text-align: center;
+    z-index: 999;
+}
+.popup button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #c5c5c5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 999;
+}
+.popup p{
+    font-size: 16px;
+    text-align: justify;
+    margin: 30px;
+    line-height: 25px;
+    z-index: 999;
+}
+
+
+
+
+
+
